@@ -38,6 +38,10 @@ services:
     volumes:
       - '/tmp/databroker:/data/db'
 
+networks:
+  re_manager:
+    driver: bridge
+
 volumes:
   zookeeper_data:
     driver: local
