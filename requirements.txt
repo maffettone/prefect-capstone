@@ -5,8 +5,9 @@ bluesky-live
 bluesky-widgets
 bluesky-kafka
 xkcdpass
-tiled
+tiled[all]
 numpy
 databroker
 ophyd
 ipython
+git+https://github.com/bluesky/databroker.git@v2.0.0b13#egg=databroker
