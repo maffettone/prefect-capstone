@@ -8,4 +8,5 @@ xkcdpass
 tiled
 numpy
 databroker
-ophydipython
+ophyd
+ipython
