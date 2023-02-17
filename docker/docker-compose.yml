@@ -9,8 +9,6 @@ services:
       - 'zookeeper_data:/bitnami'
     environment:
       - ALLOW_ANONYMOUS_LOGIN=yes
-    networks:
-      - re_manager
 
   kafka:
     image: 'docker.io/bitnami/kafka:latest'
@@ -28,8 +26,6 @@ services:
       - KAFKA_CFG_AUTO_CREATE_TOPICS_ENABLE=false
     depends_on:
       - zookeeper
-    networks:
-      - re_manager
 
   mongodb:
     image: 'docker.io/library/mongo:latest'
@@ -37,10 +33,6 @@ services:
       - '27017:27017'
     volumes:
       - '/tmp/databroker:/data/db'
-
-networks:
-  re_manager:
-    driver: bridge
 
 volumes:
   zookeeper_data:
